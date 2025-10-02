@@ -55,8 +55,6 @@ public class CellPhoneApplication {
 
 
         //printing details using string
-
-
     public static void display(CellPhone phone){
         System.out.println("Serial Number: "+ phone.getSerialNumber());
         System.out.println("Model:"+ phone.getModel());

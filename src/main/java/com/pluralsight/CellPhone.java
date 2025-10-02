@@ -8,13 +8,14 @@ public class CellPhone {
     private String owner;
 
 
-
+    ///making a constructor
     public CellPhone(){
         this.model = "";
         this.phoneNumber = "";
         this.serialNumber = 0 ;
         this.carrier = "";
         this.owner = "";
+
 
 
     }
