@@ -8,6 +8,13 @@ public class CellPhoneApplication {
         Scanner myScanner = new Scanner(System.in);
         CellPhone phone = new CellPhone();
 
+        CellPhone cellPhone2 = new CellPhone();
+        CellPhone cellPhone1 = new CellPhone();
+
+        //display(cellPhone1);
+        //display(cellPhone2);
+
+
         System.out.print("What is the serial number?");
         int serialNumber = myScanner.nextInt();
         myScanner.nextLine();
@@ -25,22 +32,32 @@ public class CellPhoneApplication {
         String owner = myScanner.nextLine();
 
         // Use setters
-        phone.setSerialNumber(serialNumber);
-        phone.setModel(model);
-        phone.setCarrier(carrier);
-        phone.setPhoneNumber(phoneNumber);
-        phone.setOwner(owner);
 
+        cellPhone1.setSerialNumber(serialNumber);
+        cellPhone1.setModel(model);
+        cellPhone1.setCarrier(carrier);
+        cellPhone1.setPhoneNumber(phoneNumber);
+        cellPhone1.setOwner(owner);
+
+        cellPhone2.setSerialNumber(10000);
+        cellPhone2.setModel("iPhone 15");
+        cellPhone2.setCarrier("T-Mobile");
+        cellPhone2.setPhoneNumber("855-555-2222");
+        cellPhone2.setOwner("Dana Wyatt's");
+
+        display(cellPhone1);
+        display(cellPhone2);
+
+        cellPhone1.dial(cellPhone2.getPhoneNumber());
+        cellPhone2.dial(cellPhone1.getPhoneNumber());
+    }
 
 
 
         //printing details using string
 
-        //System.out.printf("serialNumber: %s%n",serialNumber);
-        //System.out.printf("Model: %s%n",model);
-        //System.out.printf("Carrier: %s%n",carrier);
-        //System.out.printf("Phone Number: %s%n", phoneNumber);
-        //System.out.printf("Owner: %s%n", owner);
+
+    public static void display(CellPhone phone){
         System.out.println("Serial Number: "+ phone.getSerialNumber());
         System.out.println("Model:"+ phone.getModel());
         System.out.println("Carrier:"+ phone.getCarrier());
@@ -48,11 +65,14 @@ public class CellPhoneApplication {
         System.out.println("Owner:"+ phone.getOwner());
 
 
-
-
-
-
-
     }
 
 }
+
+
+
+
+
+
+
+
